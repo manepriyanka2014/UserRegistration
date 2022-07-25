@@ -1,3 +1,4 @@
+com\knimbus\config\AppConfiguration.class
 com\knimbus\dao\UserMapper.class
 com\knimbus\config\SwaggerDocumentationConfig.class
 com\knimbus\model\UserRole.class

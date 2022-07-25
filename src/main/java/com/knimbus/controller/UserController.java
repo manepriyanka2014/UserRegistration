@@ -96,8 +96,8 @@ public class UserController {
 		return new ResponseEntity<User>(user, HttpStatus.OK);
 	}
 	
-	@ApiOperation(value = "Get user details")
-	@RequestMapping(value = "/getuserbyemail/{email:.+}", method = RequestMethod.GET)
+	@ApiOperation(value = "Get user details using email ID")
+	@RequestMapping(value = "/getuserinfobyemail/{email:.+}", method = RequestMethod.GET)
 	public ResponseEntity<?> getUserByEmailId(
 			@ApiParam(value = "please enter the emailId to get user information", required = true) @PathVariable("email") String email){
 		System.out.println(" Inside getUserByEmailId ");
