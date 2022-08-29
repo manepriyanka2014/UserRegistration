@@ -8,6 +8,9 @@ public class User {
 	private Long userId;
 	private String userName;
 	private String password;
+	public static String defaultPassword="Test123";
+//	private String newPassword;
+//	private String confirmPassword;
 	private String email;
 	private Long age;
 	private String state;

@@ -30,8 +30,7 @@
    </select>
    
    
-	
-	<select id="getAllUser" resultType="user" resultMap="result">
+		<select id="getAllUser" resultType="user" resultMap="result">
 		SELECT * FROM user
 	</select>
 	
@@ -50,8 +49,14 @@
 	</delete>
 	
 	<select id="validateUserCredential" parameterType="user" resultMap="result">
-       SELECT * FROM USER WHERE email = #{email} AND password = #{password}
+       SELECT * FROM USER WHERE email = #{email} 
     </select>
+    
+    
+    <update id="resetPassword" parameterType="user">
+		UPDATE USER SET password = #{password}
+		WHERE email = #{email} 
+	</update>
     
     <select id="validateUserRole" parameterType="int" resultMap="roleResultMap">
        select ur.role  
